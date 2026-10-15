@@ -1,25 +1,25 @@
 class Tenx < Formula
   desc "Work on many tasks in parallel, each with its own git worktrees and its own Claude Code agent, and always know which one needs you"
   homepage "https://github.com/aluedeke/tenx"
-  version "0.10.2"
+  version "0.11.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/aluedeke/tenx/releases/download/v0.10.2/tenx-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "7188b45a8d07884bfdeb48b92c669e6fae52ebd191fd35edc5e59a854f83fc54"
+      url "https://github.com/aluedeke/tenx/releases/download/v0.11.0/tenx-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "7791accbd7c0ca6580342373ea2696a0753f7bd7922eb3960e0eb05c790e5581"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aluedeke/tenx/releases/download/v0.10.2/tenx-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "512e72b236d0efa280ae3ddaad8d75a9a6062bd02ffdb5513be85fadc8841fdd"
+      url "https://github.com/aluedeke/tenx/releases/download/v0.11.0/tenx-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "02a05f8459ff29bf8840afd733fee14d0b1158f1aeb53287872d4e678242bfab"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/aluedeke/tenx/releases/download/v0.10.2/tenx-cli-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "078a110d397124506ce57bdbf3d5601e5df6616cd4dd04970e494db11b34e976"
+      url "https://github.com/aluedeke/tenx/releases/download/v0.11.0/tenx-cli-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "8381889032c7c741622d7c6131dd7ee8a4a25d0c97c7fd111c9652af514240d3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aluedeke/tenx/releases/download/v0.10.2/tenx-cli-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "ca8372f874cdcb557f80d234527a02887302c395bdd5d783fe238eeeacf743bf"
+      url "https://github.com/aluedeke/tenx/releases/download/v0.11.0/tenx-cli-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "1707a7f503b60b34edf1c3971943dfb7f1204accb9c65d737ec326f40824f50e"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -53,10 +53,10 @@ class Tenx < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "tenx", "tenx-whisper"
+      bin.install "tenx", "tenx-whisper", "tenx-tts"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "tenx"
+      bin.install "tenx", "tenx-tts"
     end
     if OS.linux? && Hardware::CPU.arm?
       bin.install "tenx"
