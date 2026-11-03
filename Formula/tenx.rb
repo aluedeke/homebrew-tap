@@ -1,25 +1,25 @@
 class Tenx < Formula
   desc "Work on many tasks in parallel, each with its own git worktrees and its own Claude Code agent, and always know which one needs you"
   homepage "https://github.com/aluedeke/tenx"
-  version "0.22.0"
+  version "0.22.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/aluedeke/tenx/releases/download/v0.22.0/tenx-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "0d4f0ca92ceda30a9fd09825fa040128a93ff1bab65f3dd9b4002c3f650a50fd"
+      url "https://github.com/aluedeke/tenx/releases/download/v0.22.1/tenx-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "855971e956a59d0befa0eabe771dff5e648c68bdc8d76f7c1e7369cb3594187c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aluedeke/tenx/releases/download/v0.22.0/tenx-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "0e35037fecedb980155f0da8b23041ea26aefbbd8b93eb80c1b4aaf2d6aa8981"
+      url "https://github.com/aluedeke/tenx/releases/download/v0.22.1/tenx-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "6091312c4739d8b0e4060e77363545460e385cf1227634e95a5b6888f2a86099"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/aluedeke/tenx/releases/download/v0.22.0/tenx-cli-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "2a7eb9f5820363a296e5a660f5ad081af482f31dcb9b3b851855c2868d9c4c98"
+      url "https://github.com/aluedeke/tenx/releases/download/v0.22.1/tenx-cli-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "cc238bc3d43e95b26cb5746c3d2a113edc993ebb452820a4825cc48faa6bc58e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aluedeke/tenx/releases/download/v0.22.0/tenx-cli-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "c68a500d2b3870c80698aa2f3d816c7f2120a55de041963ff68fcbb47f104b8d"
+      url "https://github.com/aluedeke/tenx/releases/download/v0.22.1/tenx-cli-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "dbad4d67d560e7496056eb67fe8b01b2cb0ef0f6e047a21adba75a26a8d8366e"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
