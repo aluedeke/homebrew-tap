@@ -1,32 +1,32 @@
 class Tenx < Formula
   desc "Work on many tasks in parallel, each with its own git worktrees and its own Claude Code agent, and always know which one needs you"
   homepage "https://github.com/aluedeke/tenx"
-  version "0.46.1"
+  version "0.47.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/aluedeke/tenx/releases/download/v0.46.1/tenx-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "d3000df5cce8242b3d9865ca40abe2b98a5f22e12593a6afd94eed5ff68f02d2"
+      url "https://github.com/aluedeke/tenx/releases/download/v0.47.0/tenx-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "c6758e70d49d7d785c1206b4c16e10e27be55db75276df1d0e43ad5350137d3e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aluedeke/tenx/releases/download/v0.46.1/tenx-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "b3308596f6e30f71563680591b68e14c55f7d2d282dafc28fb5006925bd5926f"
+      url "https://github.com/aluedeke/tenx/releases/download/v0.47.0/tenx-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "ec84f72117e18fdb570bb60cbca505461af74d690f83ee016fb674d8e71c26b9"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/aluedeke/tenx/releases/download/v0.46.1/tenx-cli-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "e2b6a4fe8e64d9df6b1f5bc3da0ab3776f4ad79338429636558adbf286ba7274"
+      url "https://github.com/aluedeke/tenx/releases/download/v0.47.0/tenx-cli-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "7156d225ee0abcf6b6e16e80dc2a85d0eccbe691b6d9f432319f9de98a0e0b67"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aluedeke/tenx/releases/download/v0.46.1/tenx-cli-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "9ab55a9f08a12e84e098b2a707ce4c1fd950642bede95fc76267d3ae5848f417"
+      url "https://github.com/aluedeke/tenx/releases/download/v0.47.0/tenx-cli-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "e5c246ca0a9a3107ef9d70bc91e3b7a5506eddd67ddcfa3668241939009725cc"
     end
   end
   on_macos do
     on_arm do
       resource "tenx-app" do
-        url "https://github.com/aluedeke/tenx/releases/download/v0.46.1/tenx-app-aarch64-apple-darwin.tar.xz"
-        sha256 "3371fc750f99cbba70932d6f293664dca286e106437e0b46ef0326ae9301364f"
+        url "https://github.com/aluedeke/tenx/releases/download/v0.47.0/tenx-app-aarch64-apple-darwin.tar.xz"
+        sha256 "41668357d11e00e89ffa7cf1fcdc4d007fa7a31f08f099cc12f5c3742f2c08d1"
       end
     end
   end
